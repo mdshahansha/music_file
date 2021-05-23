@@ -1,0 +1,641 @@
+/* here  we start styling  our TAg */
+/* first we  changes the colors hole pages and some  font color */
+body {
+	background-color:rgb(6, 3, 37);
+	margin: 1px;
+	font-family:Arial, sans-serif;
+	color: white;
+}
+
+/* removing margin for all the textual elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+}
+/* making simple styleforms and making them white */
+a{
+    text-decoration:none;
+    color:white;
+}
+
+/*  making them in row wise and style the navigation bar */
+.navigation{
+    height:auto;
+    width:auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items:center;
+     box-sizing: border-box; 
+     padding-left: 5%;
+    padding-right:5%;
+    transition:all ease-in-out 1.5s;
+    }
+/* .navigation>div{
+    display:inline-block;
+} */
+.title{
+    display: inline-flex;
+}
+/* animation for used in music logo */
+@keyframes R{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+    transform:rotate(720deg);    
+    }
+}
+/* title-logo ->music logo style */
+.title-logo img{
+    height:50px;
+    width:50px;
+    border-radius:90%;
+    animation-name:R;
+    animation-timing-function: ease-in-out;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+/* title color NInja studio */
+.title-name h4{
+    background-color:linear-gradient(-45deg,0,0);
+}
+/* title  */
+.title-combo>div{
+    vertical-align:middle;
+    display:inline-block;
+}
+/* making animation for faviourtes */
+@keyframes flexibale{
+    75% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+/* makig style for fab-n class */
+.fav-n{
+    animation-name: flexible;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	animation-iteration-count: infinite;
+}
+/* search */
+.search-area{
+    width:25%;
+    position: relative;
+}
+/* style some in  search bar */
+.search-area input{
+    width:100%;
+    font-size:16px;
+    text-decoration:none;
+    border-radius:18px;
+    border:none;
+    padding:5px;
+    font-weight:500;
+    text-align:center;
+    transition: all ease-in-out 0.2s;
+    background-color: rgb(107, 154, 241);
+}
+.search-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* mic icon for input */
+.mic-ico {
+	color: rgba(32, 30, 30, 0.5);
+}
+/* search icon */
+.search-area > div:nth-child(1) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	left: 5%;
+	top: 10%;
+	transition: all ease-in-out 0.1s;
+}
+/* mic icon */
+.search-area > div:nth-child(3) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	right: 0%;
+	top: 10%;
+	transition: all ease-in-out 0.1s;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+	outline: none;
+}
+
+/* animation for bell image */
+@keyframes ringing {
+	0% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+/* notification bell image */
+.far:hover{
+	width: 40px;
+	height: 30px;
+	animation-name: ringing;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-delay: 10s;
+	position: first;
+}
+
+/* profile picture of the user */
+.profile img {
+	width: 45px;
+	height: 45px;
+	border-radius: 80%;
+}
+/* here we completed nav bar section */
+
+
+/* now from this line we start styling other part of section and contain styling part */
+main {
+	width: 100%;
+	padding: 0% 3%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	transition: all ease-in-out 1s;
+}
+aside{
+    display:inline-block;
+    overflow: hidden;
+}
+/* there are two section one lone left side and another lie right side */
+/* we work for first in left part */
+.part1{
+    width:70%;
+    /* height:85vh; */
+    overflow:hidden;
+}
+   
+.part2{
+    width:28%;
+    height:85vh;
+    z-index:2;
+}
+/* artist section */
+.artist{
+    height:20vw;
+    width:100%;
+    margin-top:12px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    background-color: rgb(27, 26, 88);
+margin-bottom:40px;
+position: relative;
+}
+/* ablumb image */
+.artist-img{
+    height:20vw;
+    width:40vw;
+    background-image:linear-gradient(to bottom,transparent,rgba(40,25,105)),url("the\ vamps.jpg");
+
+    background-size:cover;
+}
+/* right part */
+.artist-detail-sec{
+    width:60%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    box-sizing:border-box;
+    padding-right:12px;
+    margin:20px;
+}
+/* describtion part */
+.albumb-detail,.music-all{
+    width:100%;
+    height:max-content;
+} 
+.artist-name,.follower{
+    display:inline-block;
+}
+.artist-name h1{
+    font-size:2vw;
+}
+.follower{
+    position:absolute;
+    right:0%;
+    top:5%;
+}
+.follower,.origin{
+    font-size:1.5vw;
+}
+.discuss{
+    font-size:1.5vw;
+    margin-top:10px;
+}
+/* music all */
+.music-all{
+
+}
+.music-all p{
+    font-size:1vw;
+    margin-top:.3px;
+
+    padding-left: 5px;
+} 
+.discuss{
+    font-size:11px;
+}
+.music-btn>button{
+    border:0px;
+    height:2vw;
+    width:8vw;
+    color:white;
+    font-size:1.2vw;
+    margin:10px;
+    padding-right: 30px;
+}
+.music-btn >button:nth-child(1){
+    background-image: linear-gradient(-19deg, rgb(152, 152, 240) 10%,rgb(37, 37, 126) 100%);
+}
+.music-btn > button:nth-child(2){
+    background-color: transparent;
+}
+
+/* here we completed all the styles in decribing the  albumb detail */
+
+/* particular item in the playlist */
+.playlist-item {
+	/* height:60px;
+    width:100%; */
+	height: 8vh;
+
+	box-sizing: border-box;
+	background-color: var(--playlist-items-background-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+	/* transition: all ease-in-out 0.1s; */
+	}
+/*  */
+
+.playlist-item::-webkit-scrollbar {
+	display:;
+}
+body{
+	background-color: #0c1027;
+	margin: 0;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/* playlist item hovering effects */
+.playlist-item:hover {
+	background-color: var(--playlist-items-background-color-on-hover);
+}
+/* left part if the playlist item */
+.left {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 30%;
+	height: 100%;
+	padding: 0% 1%;
+}
+/* center part of the playlist item which contains the duration length of the song */
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: min-content;
+	height: 100%;
+}
+/* right part of the playlist item, which contains icons */
+.right {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 100%;
+	padding-right: 2%;
+}/* now adjusting the contents of left, center and right parts */
+.left > div:nth-child(2) {
+	height: 80%;
+	min-width: 50px;
+	max-width: 50px;
+	margin: 0px 12% 0px 12%;
+	position: relative;
+}
+.left > div:nth-child(2) img {
+	width: 100%;
+	height: 100%;
+}
+.left > div:nth-child(3) p {
+	color: rgb(185, 185, 185);
+}
+/* customizing the play button */
+.play-btn {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: all ease-in-out 0.1s;
+}
+/* on hover effects */
+.play-btn:hover {
+	opacity: 0.7;
+}
+/* adjusting fonts in the playlist items  */
+.left div p {
+	font-size: 14px;
+}
+.center {
+	font-size: 12px;
+	color: rgb(185, 185, 185);
+}
+.right {
+	color: rgb(185, 185, 185);
+}
+.right div:nth-child(2) {
+	margin-left: 27%;
+}
+/* second section of the page starts here */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* "more" button properties */
+label {
+	display: none;
+	position: absolute;
+	right: 0%;
+	top: 20%;
+	padding-bottom: 5px;
+	z-index: 3;
+	box-shadow: 0px 0px 2px 1px white;;
+	width: 70px;
+	font-size: 20px;
+	height: 21px;
+	text-align: center;
+	background-image: linear-gradient(red, blue);
+}
+/* on a normal display, it will be hidden */
+label ~ input {
+	display: none;
+}
+/* ASIDE SECTION -2 */
+/* this is the first section heading of the aside section 2 */
+.section-heading {
+	margin-top: 10px;
+	position: relative;
+	margin-bottom: 10px;
+	
+}
+/* adjusting for side by side display */
+.section-heading div,
+.section-heading h1 {
+	display: inline-block;
+}
+.section-heading h1 {
+	font-size: 23px;
+}
+.section-heading div {
+	position: absolute;
+	bottom: 0%;
+	right: 0px;
+	font-size: 14px;
+}
+
+.playlist-items::-webkit-scrollbar {
+	display: none;
+}
+.list {
+	height: 36vh;
+	overflow: scroll;
+}
+/* hiding the scrollbar */
+.list::-webkit-scrollbar {
+	display: none;
+}
+/* this is particular item in the "list  container*/
+.list-item {
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: 12px;
+}
+/* hovering effect for the list item */
+.list-item:hover {
+	background-color: var(--playlist-items-background-color-on-hover);
+}
+/* adjusting the name and image of the songs relative to their original position */
+.list-item > div:nth-child(1) {
+	width: 100px;
+	height: 100%;
+	position: relative;
+}
+.list-item > div:nth-child(1) > img {
+	width: 100%;
+	height: 100%;
+}
+.author-name {
+	font-size: 12px;
+	color: rgb(185, 185, 185);
+}
+.extra {
+	text-align: right;
+	height: 100%;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Footer section starts here*/
+/* this is the container for the whole footer */
+footer {
+	position: fixed;
+	bottom: 1px;
+	width: 100%;
+	height: 60px;
+	background-color: #282828;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+}
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.active-song-description {
+	/* border:1px solid white; */
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+/* current song image */
+#song-image img {
+	width: 100%;
+	height: 100%;
+}
+/* heart and ban icon */
+.heart-and-ban-icon {
+	height: 100%;
+	padding-top: 4%;
+}
+/* song decscription */
+.song-desc {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+/* song name */
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+}
+/* song author */
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+}
+
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
+/* hover effect for the slider */
+.slider:hover {
+	opacity: 1;
+}
+
+/* these are for adjusting the dimensions and default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #007bff;
+	cursor: pointer;
+}
+
+/* this is the circular thumb, which can be moved across the div */
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+
+
